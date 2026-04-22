@@ -1,17 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sekuya&display=swap');
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/inter-v20-latin-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/inter-v20-latin-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/inter-v20-latin-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/inter-v20-latin-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Sekuya';
+    src: url('../fonts/sekuya/sekuya-v1-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
 
 body {
     background-color: rgba(0, 0, 0, 0.921);
     color: white;
     font-family: "Inter", sans-serif;
+    letter-spacing: 0.2px;
+
+    animation: fadeIn 1s ease;
+    font-weight: 400;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .title {
     width: fit-content;
-    margin: 64px auto;
+    margin: 80px auto 0;
     font-size: 44px;
     font-family: "Sekuya", system-ui;
-    font-weight: 700;
+}
+
+.neon-line {
+    padding: 0;
+    margin: 24px auto 30px;
+    border: 4px solid #23ea625f;
+    background-color: #23ea6289;
+    box-shadow: 0 0 5px #23ea6279,
+                0 0 10px #23ea6279,
+                0 0 20px #23ea6279;
+    width: 250px;
+    height: 0px;
+    border-radius: 8px;
 }
 
 .content {
@@ -19,27 +84,46 @@ body {
     margin: auto;
 }
 
-.drop-down-icon {
-    display: block;
+.paragraph {
+    display: flex;
+    align-items: start;
+    gap: 12px;
+
+    margin-bottom: 16px;
+}
+
+.icon {
+    user-select: none;
+    color: #23ea62b0;
+    text-shadow: 0 0 5px #23ea6279,
+                0 0 10px #23ea6279,
+                0 0 20px #23ea6279;
+}
+
+.paragraph p {
+    margin: 0;
+    padding: 0;
+    text-align: justify;
 }
 
 .tips-list {
     list-style: none;
     width: fit-content;
     padding: 0;
-    margin: 0 0 0 16px;
+    margin: -8px 0 0 16px;
 }
 
 .collapsible {
     display: flex;
     align-items: center;
+    gap: 2px;
     color: white;
     text-decoration: none;
     width: fit-content;
     margin: 1px 0;
 }
 
-.collapsible i {
+.collapsible .icon {
     transition: transform 0.2s ease-out;
 }
 
@@ -48,12 +132,14 @@ body {
 }
 
 .collapsible-content {
-    margin-left: 24px;
     max-width: 400px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     text-align: justify;
+    padding-left: 16px;
+    margin-left: 11px;
+    border-left: 3px solid #ffffff1a;
 }
 
 .collapsible-content p {

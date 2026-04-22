@@ -1,4 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sekuya&display=swap');
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter/inter-v20-latin-200.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter/inter-v20-latin-300.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter/inter-v20-latin-300italic.woff2') format('woff2');
+    font-weight: 300;
+    font-style: italic;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/inter/inter-v20-latin-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'Sekuya';
+    src: url('./fonts/sekuya/sekuya-v1-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
 
 /*
 Sekuya:
@@ -12,14 +50,40 @@ body {
     background-color: rgba(0, 0, 0, 0.921);
     color: white;
     font-family: "Inter", sans-serif;
+
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .title {
     width: fit-content;
-    margin: 176px auto 84px auto;
+    margin: 176px auto 0 auto;
     font-size: 84px;
     font-family: "Sekuya", system-ui;
-    font-weight: 700;
+    font-weight: 400;
+}
+
+.neon-line {
+    padding: 0;
+    margin: 20px auto 48px;
+    border: 4px solid #23ea62b0;
+    background-color: #23ea6289;
+    box-shadow: 0 0 5px #23ea6279,
+                0 0 10px #23ea6279,
+                0 0 20px #23ea6279;
+    width: 250px;
+    height: 0px;
+    border-radius: 8px;
 }
 
 .topics-list {
@@ -36,15 +100,22 @@ body {
 
 .topics-list-item {
     font-size: 24px;
-    font-weight: 100;
+    font-weight: 200;
     height: 24px;
     margin: 0;
-    padding: 0;
-    transition: font-size 0.25s;
+    padding: 4px 8px 10px 8px;
+    transition: font-size 0.25s,
+                box-shadow 0.25s,
+                padding 0.25s;
+    border-radius: 8px;
 }
 
 .topics-list-item:hover {
-    font-size: 28px;
+    font-size: 26px;
+    padding: 4px 8px 12px 8px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.476),
+                0 0 12px #23ea6279,
+                0 0 20px #23ea6279;
 }
 
 .topics-list-item a {
