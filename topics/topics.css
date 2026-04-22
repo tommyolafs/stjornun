@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sekuya&display=swap');
+
+body {
+    background-color: rgba(0, 0, 0, 0.921);
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.title {
+    width: fit-content;
+    margin: 64px auto;
+    font-size: 44px;
+    font-family: "Sekuya", system-ui;
+    font-weight: 700;
+}
+
+.content {
+    width: 840px;
+    margin: auto;
+}
+
+.drop-down-icon {
+    display: block;
+}
+
+.tips-list {
+    list-style: none;
+    width: fit-content;
+    padding: 0;
+    margin: 0 0 0 16px;
+}
+
+.collapsible {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    margin: 1px 0;
+}
+
+.collapsible i {
+    transition: transform 0.2s ease-out;
+}
+
+.collapsible:hover {
+    cursor: pointer;
+}
+
+.collapsible-content {
+    margin-left: 24px;
+    max-width: 400px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    text-align: justify;
+}
+
+.collapsible-content p {
+    padding: 0;
+    margin: 4px 0 12px;
+}
+
+.active-collapsible i {
+    transform: rotate(90deg);
+}

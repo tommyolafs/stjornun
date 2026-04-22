@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sekuya&display=swap');
+
 /*
 Sekuya:
     font-family: "Sekuya", system-ui;
@@ -7,15 +8,13 @@ Inter:
     font-family: "Inter", sans-serif;
 */
 
-
 body {
-    background-color: rgba(0, 0, 0, 0.846);
+    background-color: rgba(0, 0, 0, 0.921);
     color: white;
     font-family: "Inter", sans-serif;
 }
 
-
-.header {
+.title {
     width: fit-content;
     margin: 176px auto 84px auto;
     font-size: 84px;
