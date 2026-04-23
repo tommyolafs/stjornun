@@ -70,7 +70,7 @@ body {
     padding: 0;
     margin: 24px auto 30px;
     border: 4px solid #23ea625f;
-    background-color: #23ea6289;
+    background-color: #23ea62b0;
     box-shadow: 0 0 5px #23ea6279,
                 0 0 10px #23ea6279,
                 0 0 20px #23ea6279;
@@ -149,4 +149,37 @@ body {
 
 .active-collapsible i {
     transform: rotate(90deg);
+}
+
+.more-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.more-info a {
+    text-decoration: none;
+}
+
+.more-info_websites {
+    display: flex;
+    gap: 16px;
+}
+
+.source-button {
+    border-radius: 12px;
+    padding: 6px 10px 6px 10px;
+    box-shadow: 0 0 5px #23ea6279,
+                0 0 8px #23ea6279,
+                0 0 12px #23ea6279;
+
+    color: white;
+    font-weight: 300;
+
+    transition: background-color 0.25s,
+                color 0.25s;
+}
+
+.source-button:hover {
+    background-color: #23ea62b0;
+    color: rgba(0, 0, 0, 0.921);
 }

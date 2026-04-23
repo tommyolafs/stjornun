@@ -103,11 +103,11 @@ body {
     font-weight: 200;
     height: 24px;
     margin: 0;
-    padding: 4px 8px 10px 8px;
+    padding: 6px 10px 12px 10px;
     transition: font-size 0.25s,
                 box-shadow 0.25s,
                 padding 0.25s;
-    border-radius: 8px;
+    border-radius: 12px;
 }
 
 .topics-list-item:hover {
